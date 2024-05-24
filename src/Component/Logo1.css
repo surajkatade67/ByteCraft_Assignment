@@ -1,0 +1,45 @@
+.logo-container {
+    display: flex;
+    align-items: center; /* Center content vertically */
+  }
+  
+  .left {
+    flex: 0 0 30%; /* Take 30% width */
+  }
+  
+  .right {
+    flex: 1; /* Take remaining width */
+    display: flex;
+    justify-content: space-around; /* Distribute items evenly */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .right img {
+    max-width: 100%; /* Ensure images don't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 10px; /* Add margin between images */
+    transition: transform 0.3s; /* Add transition effect */
+  }
+  
+  .right img:hover {
+    transform: translateY(-5px); /* Move image up slightly on hover */
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .logo-container {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      text-align: center; /* Center text and images */
+    }
+  
+    .left, .right {
+      flex: 1; /* Take full width */
+      width: auto; /* Reset width */
+      margin: 20px 0; /* Add vertical margin */
+    }
+  
+    .right img {
+      margin: 10px; /* Adjust margin for smaller screens */
+    }
+  }
+  
